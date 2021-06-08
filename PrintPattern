@@ -1,0 +1,32 @@
+package test;
+
+public class SampleProgram {
+
+	public static void main(String[] args) {
+		String input = "WELCOME";
+		printPattern(input);
+	}
+	static void printPattern(String input) {
+		int middleBeforeChanging = input.length()/2;
+		int middleAfterChanging = input.length()/2;
+		int length1 = input.length();
+		int length2 = input.length();
+		while(middleAfterChanging!=-1) {
+			for(int i = middleAfterChanging;i<length2;i++) {
+				for(int k=0;k<length1-1;k++) {
+					System.out.print("");	
+				}
+				length1--;
+				for(int j=middleAfterChanging;j<=i;j++) {
+					System.out.print(input.charAt(j));
+				}
+				System.out.println();
+			}
+			length2 = middleAfterChanging;
+			middleAfterChanging = 0;
+			
+		}
+			
+			
+	}
+}
